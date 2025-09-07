@@ -32,9 +32,8 @@ const Login = () => {
       body: JSON.stringify(newUser),
     });
     data = await res.json();
-    console.log(res.ok);
-    console.log(data.accessToken);
     localStorage.setItem("token", data.accessToken);
+    renderAfter();
   };
 };
 

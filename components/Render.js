@@ -1,11 +1,11 @@
-// اینجا به جای این که بیایم از لوکال استوریج بگیریم دیتارو میایم دیتایی که از بک اند فچ کردیم رو میگیرم و باقیش روال عادیه
 import deleteTask from "./deleteTask.js";
 import { BASE_URL } from "../BaseUrl.js";
 
-const renderTasks = () => {
+const renderTasks = async () => {
   let tasks = [];
   const token = localStorage.getItem("token");
-  const getTasks = async () => {
+
+  try {
     const res = await fetch(`${BASE_URL}/task/getTasks`, {
       method: "GET",
       headers: {
@@ -14,12 +14,7 @@ const renderTasks = () => {
       },
     });
     const data = await res.json();
-    console.log(data);
-    tasks = data;
-  };
-
-   try {
-    getTasks()
+    tasks = data.data;
   } catch (error) {
     console.log(error);
   }
@@ -28,8 +23,6 @@ const renderTasks = () => {
   list.innerHTML = "";
 
   const RenderGetedTasks = () => {
-    console.log(tasks);
-
     tasks.forEach((task) => {
       const div = document.createElement("div");
       const li = document.createElement("li");
@@ -49,6 +42,7 @@ const renderTasks = () => {
       list.appendChild(div);
     });
   };
+
   RenderGetedTasks();
 };
 
