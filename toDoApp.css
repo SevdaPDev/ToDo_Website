@@ -1,0 +1,86 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: #fffafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  direction: rtl;
+}
+
+.bakhshinput {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0px 12px;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #ffd1dc;
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+.button {
+  background-color: #ff94c2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all;
+  font-size: 15px;
+  height: 46px;
+}
+
+.button:hover {
+  background-color: rgb(243, 199, 143);
+}
+
+.ul {
+  width: 50vw;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.ul div {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.ul div li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0;
+  padding: 10px;
+}
+.task-item {
+  margin: 20px;
+  border: solid #ff94c2;
+  width: 160px;
+  padding: 3px;
+  border-radius: 7px;
+}
+.delete-btn {
+  background-color: #ff94c2;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 190px;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: 500px 300px; */
+}
