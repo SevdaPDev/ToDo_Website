@@ -1,5 +1,7 @@
 // خب این ماژول دیگه به درد نمیخوره چون ما کلا دیگه با لوکال استوریج کاری نداریم به جاش اسم این کامپوننت رو تغییر میدیم به دیتا و دیتایی که از بک اند فچ میکنیم رو اینجا فچ میکنیم و توی کامپوننت های دیگه ازش استفاده میکنیم
 
+import { BASE_URL } from "../BaseUrl.js";
+
 // برای مثال
 
 export let tasks = [];
@@ -7,7 +9,7 @@ export let tasks = [];
 
 export const getTasks = () => {
   const GetTasks = async () => {
-    res = await fetch("http://46.100.94.88:3003/tasks/getTasks", {
+    res = await fetch(`${BASE_URL}/tasks/getTasks`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +22,7 @@ export const getTasks = () => {
     tasks = data;
   };
 };
-// چون فانکشنه پس یه بار باید صدا زده بشه که بتونه دیتارو فچ کنه از بک اند برای همین توی main.js یه بار این فانکشن رو صدا میزنیم چون این ماژول همون اول یه بار اجرا میشه 
+// چون فانکشنه پس یه بار باید صدا زده بشه که بتونه دیتارو فچ کنه از بک اند برای همین توی main.js یه بار این فانکشن رو صدا میزنیم چون این ماژول همون اول یه بار اجرا میشه
 
 export const getTasksFromStorage = () => {
   return JSON.parse(localStorage.getItem("tasks")) || [];

@@ -1,3 +1,4 @@
+import { BASE_URL } from "../BaseUrl.js";
 import renderTasks from "./Render.js";
 
 const addTask = () => {
@@ -15,7 +16,7 @@ const addTask = () => {
   
 
   const createTask = async () => {
-    const res = await fetch("http://46.100.94.88:3003/task/createTask", {
+    const res = await fetch(`${BASE_URL}/task/createTask`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

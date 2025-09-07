@@ -1,4 +1,5 @@
 import { renderAfter } from "./main.js";
+import { BASE_URL } from "./BaseUrl.js";
 
 const Login = () => {
   let username;
@@ -23,10 +24,7 @@ const Login = () => {
   });
 
   const LoginForm = async () => {
-     console.log(newUser);
-    
-
-    res = await fetch("http://46.100.94.88:3003/auth/login", {
+    res = await fetch(`${BASE_URL}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
