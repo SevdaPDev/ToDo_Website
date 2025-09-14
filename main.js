@@ -28,6 +28,7 @@ export const renderAfter = () => {
 
     // اضافه کردن Event Listener برای دکمه
     addBtn.addEventListener("click", () => addTask());
+    renderTasks();
   }
 };
 renderAfter();
@@ -36,4 +37,3 @@ renderAfter();
 // getTasks();
 
 // اولین بار نمایش
-renderTasks();
