@@ -24,17 +24,16 @@ export const renderAfter = () => {
       </div>
       <ul class="ul" id="taskList"></ul>
     </div>`;
+    const addBtn = document.getElementById("addBtn");
+
+    // اضافه کردن Event Listener برای دکمه
+    addBtn.addEventListener("click", () => addTask());
   }
 };
 renderAfter();
 
 // یه بار این فانکشن رو صدا میزنیم که تسک هارو از بک اند فچ کنیم در اول اپلیکیشن
 // getTasks();
-
-const addBtn = document.getElementById("addBtn");
-
-// اضافه کردن Event Listener برای دکمه
-addBtn.addEventListener("click", () => addTask());
 
 // اولین بار نمایش
 renderTasks();
