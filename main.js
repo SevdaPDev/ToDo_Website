@@ -4,6 +4,8 @@ import Login from "./login.js";
 
 export const renderAfter = () => {
   const token = localStorage.getItem("token");
+  console.log(null == false);
+
   if (token) {
     document.getElementById("mainPage").innerHTML = `<h1 style="
     color: #ff6ba3;
